@@ -7,7 +7,7 @@ steps:
 
   - wait
 
-  - name: ':package: Build App for Test'
+  - name: ":package: Build App for Test"
     command: script.sh
     branches: master
     artifact_paths: "artifacts/*"
