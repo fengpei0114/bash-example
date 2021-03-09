@@ -4,3 +4,12 @@ steps:
     artifact_paths: "artifacts/*"
     agents:
       queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+
+  - wait
+
+  - name: ':package: Build App for Test'
+    command: script.sh
+    branches: master
+    artifact_paths: "artifacts/*"
+    agents:
+      queue: muppets:build
