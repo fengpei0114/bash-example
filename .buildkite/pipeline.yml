@@ -8,8 +8,8 @@ steps:
   - wait
 
   - name: ":package: Build App for Test"
-    command: script.sh
+    command: "script.sh"
     branches: master
     artifact_paths: "artifacts/*"
     agents:
-      queue: muppets:build
+      queue: "muppets:build"
