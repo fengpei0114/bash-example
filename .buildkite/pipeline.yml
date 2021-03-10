@@ -13,3 +13,14 @@ steps:
     artifact_paths: "artifacts/*"
     agents:
       queue: "muppets:build"
+
+
+  - name: ":package: Build App for Test"
+    command: "script.sh"
+    branches: master
+    artifact_paths: "artifacts/*"
+    agents:
+      queue: "muppets:build"
+    retry:
+      manual:
+        permit_on_passed: true
