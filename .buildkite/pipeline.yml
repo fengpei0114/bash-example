@@ -8,7 +8,7 @@ steps:
   - wait
 
   - name: ":package: Build App for Test"
-    command: "script.sh"
+    command: ./script.sh
     branches: master
     artifact_paths: "artifacts/*"
     agents:
@@ -18,7 +18,7 @@ steps:
     branches: master
 
   - name: ":package: Build App for Test"
-    command: ./script.sh
+    command: ./steps.sh
     branches: master
     artifact_paths: "artifacts/*"
     agents:
