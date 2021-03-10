@@ -14,9 +14,11 @@ steps:
     agents:
       queue: "muppets:build"
 
+  - block: ":lock: lock!"
+    branches: master
 
   - name: ":package: Build App for Test"
-    command: "script.sh"
+    command: ./script.sh
     branches: master
     artifact_paths: "artifacts/*"
     agents:
