@@ -12,7 +12,7 @@ steps:
     branches: master
     artifact_paths: "artifacts/*"
     agents:
-      queue: "muppets:build"
+      queue: "step:build"
 
   - block: ":lock: lock!"
     branches: master
@@ -22,7 +22,7 @@ steps:
     branches: master
     artifact_paths: "artifacts/*"
     agents:
-      queue: "muppets:build"
+      queue: "step:build"
     retry:
       manual:
         permit_on_passed: true
